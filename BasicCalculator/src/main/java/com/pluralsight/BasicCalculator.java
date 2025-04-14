@@ -1,4 +1,4 @@
-package BasicCalculator; // Make sure your folder matches this package name
+package com.pluralsight; // Make sure your folder matches this package name
 
 import java.util.*;
 
