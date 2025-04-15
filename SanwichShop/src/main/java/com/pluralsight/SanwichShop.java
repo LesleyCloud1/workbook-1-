@@ -8,6 +8,7 @@ public class SanwichShop {
         System.out.println("Welcome to the Sandwich Shop!");
         System.out.println("Enter Sanwich size (1 for Regular - $5.45, 2 for Large - $8.95): " );
         int size = scanner.nextInt();;
+        scanner.nextLine();
 
         //Get Price
         double basePrice;
@@ -19,6 +20,18 @@ public class SanwichShop {
             System.out.println("Invalid size selection. Please enter 1 or 2.");
             return;
         }
+        // Step 2: Ask if they want it loaded
+        System.out.print("Would you like the sandwich loaded? (yes/no): ");
+        String loaded = scanner.nextLine().trim().toLowerCase();
+
+        if (loaded.equals("yes")) {
+            if (size == 1) {
+                basePrice += 1.00;
+            } else {
+                basePrice += 1.75;
+            }
+        }
+
         // Prompt for age
         System.out.print("Enter your age: ");
         int age = scanner.nextInt();
